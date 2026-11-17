@@ -274,7 +274,6 @@ if the MP3 fails to load. Original work, no licence restrictions.
 
 - `img/buddy.gif` and `img/heartbeat.gif` (the scaffold's first generated
   GIFs) were removed: no page references them any more.
-- No photos of the couple are included or invented. The gallery starts with
-  placeholder frames; photos are added via `js/config.js` (see README.txt).
+- No photos of the couple are included or invented.
 - No emoji characters appear anywhere in the site's text, titles, buttons
   or particles (verified by scan). All icons are inline SVG or image files.

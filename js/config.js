@@ -1,9 +1,9 @@
 /* ============================================================================
    EDIT ME — everything personal lives in this one file (js/config.js).
    Change the names, add your anniversary date, rewrite the letters and
-   reasons, and add your photos. No other file needs editing.
+   reasons. No other file needs editing.
 
-   NAMES: "her" is her name, "me" is your name. They appear in titles,
+   NAMES: "her" is her name, "me" is your name. They appear in
    letters, buttons and messages all over the site.
 
    ANNIVERSARY ("since"): the day you got together, as "YYYY-MM-DD".
@@ -12,12 +12,6 @@
    instead of inventing a number. When you set it, the home page shows
    how many days you have been together.
 
-   PHOTOS: put your photo files in the img/ folder, then list them here,
-   e.g.  photos: ["img/us1.jpg", "img/us2.jpg"]
-   You can also add a caption:  { src: "img/us1.jpg", caption: "Us, happy" }
-   Leave photos: [] and the gallery shows pretty placeholder frames with
-   instructions instead. No photos of you are included or invented.
-
    LETTERS: each letter has a title and a body. Use a blank line in the
    body text to start a new paragraph. Keep them in your own words.
 
@@ -25,16 +19,14 @@
    you like — the cards, shuffle and counter all adapt automatically.
    ========================================================================== */
 window.CONFIG = {
-  her: "Prashu",
-  me: "Samman",
+  her: "My World",
+  me: "your guy",
   since: "",
-
-  photos: [],
 
   letters: [
     {
       title: "The first thing I want you to know",
-      body: "Prashu, I made this little corner of the internet just for you, because you deserve a place that is as warm as you make every day feel.\n\nThank you for being the softest part of my loudest days. You have this way of turning an ordinary evening into something I look forward to all day, and I notice every kind thing you do, even the ones you think are small.\n\nI love the way you laugh, the way you care, and the way you make the people around you feel seen. Being with you is the easiest, happiest decision I have ever made.\n\nWherever this life takes us, I want you to know I am proud to be yours, and I am grateful for you today, tomorrow, and every day after that."
+      body: "My World, I made this little corner of the internet just for you, because you deserve a place that is as warm as you make every day feel.\n\nThank you for being the softest part of my loudest days. You have this way of turning an ordinary evening into something I look forward to all day, and I notice every kind thing you do, even the ones you think are small.\n\nI love the way you laugh, the way you care, and the way you make the people around you feel seen. Being with you is the easiest, happiest decision I have ever made.\n\nWherever this life takes us, I want you to know I am proud to be yours, and I am grateful for you today, tomorrow, and every day after that."
     },
     {
       title: "On the days you doubt yourself",
@@ -50,7 +42,11 @@ window.CONFIG = {
     },
     {
       title: "Just because",
-      body: "No special occasion. No big reason. Just because you exist, and that is reason enough to celebrate.\n\nI was thinking about you today — the way you make me laugh when I least expect it, the way one message from you can rescue a whole bad day — and I wanted you to know it in this exact moment, not someday later.\n\nYou are my favorite notification, my favorite hello, and my favorite thought at the end of the day.\n\nSo this letter is just to say: I love you, Prashu. Today, for no reason at all, and for every reason at once."
+      body: "No special occasion. No big reason. Just because you exist, and that is reason enough to celebrate.\n\nI was thinking about you today — the way you make me laugh when I least expect it, the way one message from you can rescue a whole bad day — and I wanted you to know it in this exact moment, not someday later.\n\nYou are my favorite notification, my favorite hello, and my favorite thought at the end of the day.\n\nSo this letter is just to say: I love you, My World. Today, for no reason at all, and for every reason at once."
+    },
+    {
+      title: "I am sorry",
+      body: "I am sorry. I am not perfect, but I try my level best for you.\n\nForgive me for my mistakes that hurt you a lot."
     }
   ],
 

@@ -1,9 +1,9 @@
-/* For Prashu — a little website full of love. All content lives in js/config.js. */
+/* My World — a little website full of love. All content lives in js/config.js. */
 (function () {
   "use strict";
   const C = window.CONFIG || {};
-  const HER = C.her || "Prashu";
-  const ME = C.me || "Samman";
+  const HER = C.her || "My World";
+  const ME = C.me || "your guy";
   const page = document.body.dataset.page || "index";
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const $ = (s, r) => (r || document).querySelector(s);
@@ -210,8 +210,7 @@
   main.id = "app";
   document.body.appendChild(main);
   const footer = document.createElement("footer");
-  footer.innerHTML = 'Made with <span class="f-heart">' + heartSvg("#e0457b") + '</span> by ' + esc(ME) + " for " + esc(HER) +
-    '<br><span class="credit">Music: Heartwarming — Kevin MacLeod (incompetech.com), licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons: By Attribution 4.0</a></span>';
+  footer.innerHTML = '<span class="credit">Music: Heartwarming — Kevin MacLeod (incompetech.com), licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons: By Attribution 4.0</a></span>';
   document.body.appendChild(footer);
 
   document.addEventListener("click", (e) => {
@@ -248,7 +247,7 @@
     const hugs = hugCount();
     main.innerHTML =
       '<p class="pill">A little website, made only for you</p>' +
-      '<h1 class="hero-name">For ' + esc(HER) + "</h1>" +
+      '<h1 class="hero-name">My World</h1>' +
       daysLine +
       '<div class="hero-frame">' +
       '<img src="img/hero-heart.gif" data-fb="heart" data-fb-cap="A heart, beating just for you" alt="A cute beating heart" width="320" height="320">' +
@@ -263,15 +262,13 @@
       '<figure class="show-card"><img src="img/cute-cat.gif" data-fb="cat" data-fb-src="img/sticker-cat.png" data-fb-cap="A cute cat, thinking of you" alt="A cute cat with a heart" loading="lazy"><p>Me, waiting to hear from you</p></figure>' +
       '<figure class="show-card"><img src="img/love-bear.gif" data-fb="bear" data-fb-src="img/sticker-bear.png" data-fb-cap="A little bear, sending love" alt="A cute bear holding a heart" loading="lazy"><p>Sending you all my love</p></figure>' +
       "</div>" +
-      "<h2>Our little gallery</h2>" +
-      '<div id="gallery"></div>' +
       '<div class="btn-row">' +
       '<a class="btn" href="letters.html">' + icon("mail") + " Read your letters</a>" +
       '<a class="btn" href="reasons.html">' + icon("star") + " See the reasons</a>" +
       '<a class="btn" href="play.html">' + icon("play") + " Play the heart game</a>" +
       "</div>";
 
-    const MILESTONES = { 1: "First hug delivered. Many more where that came from.", 10: "Ten hugs! You are officially the most hugged person on the internet.", 25: "Twenty-five hugs and counting. I am not stopping.", 50: "Fifty hugs! This is what happiness looks like.", 100: "One hundred hugs. You are so loved, Prashu." };
+    const MILESTONES = { 1: "First hug delivered. Many more where that came from.", 10: "Ten hugs! You are officially the most hugged person on the internet.", 25: "Twenty-five hugs and counting. I am not stopping.", 50: "Fifty hugs! This is what happiness looks like.", 100: "One hundred hugs. You are so loved, My World." };
     $("#hugBtn").addEventListener("click", (e) => {
       const n = hugCount() + 1;
       store.set("prashu-hugs", String(n));
@@ -288,23 +285,6 @@
       }
     });
 
-    // Gallery: real photos from config, or clearly-marked placeholders.
-    const g = $("#gallery");
-    const photos = Array.isArray(C.photos) ? C.photos : [];
-    if (!photos.length) {
-      g.innerHTML =
-        '<div class="gallery">' +
-        ["Your favorite photo together", "A silly selfie", "A perfect little moment"].map((t) =>
-          '<div class="photo-empty">' + icon("camera") + "<b>" + t + "</b><span>Your photo goes here</span></div>").join("") +
-        "</div>" +
-        '<div class="hint-box"><b>How to add your photos:</b> put the photo files in the <code>img/</code> folder, then list them in <code>js/config.js</code> under <code>photos</code> — for example <code>photos: ["img/us1.jpg", "img/us2.jpg"]</code>. These placeholder frames disappear on their own once photos are added.</div>';
-    } else {
-      g.innerHTML = '<div class="gallery">' + photos.map((p) => {
-        const src = typeof p === "string" ? p : p.src;
-        const cap = typeof p === "string" ? "" : (p.caption || "");
-        return '<figure class="photo"><img src="' + esc(src) + '" alt="' + esc(cap || "A photo of you two") + '" loading="lazy" data-fb="photo" data-fb-cap="Photo coming soon">' + (cap ? "<figcaption>" + esc(cap) + "</figcaption>" : "") + "</figure>";
-      }).join("") + "</div>";
-    }
     wireImgFallbacks(main);
   }
 
